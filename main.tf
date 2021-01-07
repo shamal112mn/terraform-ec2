@@ -21,16 +21,16 @@ resource "aws_instance" "web" {
 }
 
 data "aws_ami" "my_ami" {
-		most_recent = true
-		filter {
-		name = "name"
-		values = [var.ami_name]
-		}
-		filter {
-		name = "virtualization-type"
-		values = ["hvm"]
-		}
-		 owners           = ["self"] 
-	}
+   most_recent = true
+   filter {
+	name = "name"
+	values = [var.ami_name]
+   }
+   filter {
+	name = "virtualization-type"
+	values = ["hvm"]
+   }
+   owners        = ["self"] 
+}
 
 
