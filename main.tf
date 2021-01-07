@@ -24,7 +24,7 @@ data "aws_ami" "my_ami" {
 		most_recent = true
 		filter {
 		name = "name"
-		values = ["dev-66752d1b-320a-4c12-bf42-233eb7f2c331*"]
+		values = [var.ami_name]
 		}
 		filter {
 		name = "virtualization-type"
